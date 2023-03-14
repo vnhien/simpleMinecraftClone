@@ -1,4 +1,4 @@
-# Simple Mine craft clone using threejs
+# Simple Minecraft clone using threejs
 
 This project was created using create-react-app and based on this tutorial https://www.youtube.com/watch?v=qpOZup_3P_A.
 
