@@ -1,10 +1,10 @@
-# Simple Minecraft clone using threejs
+# Simple Minecraft clone using react-three-fiber
 
-This project was created using create-react-app and based on this tutorial https://www.youtube.com/watch?v=qpOZup_3P_A.
+This project was created  based on this tutorial https://www.youtube.com/watch?v=qpOZup_3P_A.
 
 ## Usage
 
- ### `npm install`
+### `npm install`
 
 ### `npm start`
 
