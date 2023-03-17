@@ -2,12 +2,20 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useState,
 } from "react";
 import { nanoid } from "nanoid";
-import { dirt, grass, log } from "../../textures/images";
+import {
+  dirt,
+  grass,
+  log,
+  coal,
+  copper,
+  iron,
+  plank,
+  stone,
+} from "../../textures/images";
 
 const gameContext = createContext();
 export const GameContextProvider = ({ children }) => {
@@ -17,11 +25,11 @@ export const GameContextProvider = ({ children }) => {
     { name: "dirtTexture", img: dirt },
     { name: "logTexture", img: log },
     { name: "grassTexture", img: grass },
-    {},
-    {},
-    {},
-    {},
-    {},
+    { name: "coalTexture", img: coal },
+    { name: "copperTexture", img: copper },
+    { name: "ironTexture", img: iron },
+    { name: "plankTexture", img: plank },
+    { name: "stoneTexture", img: stone },
   ]);
 
   const [active, setActive] = useState(0);
@@ -68,6 +76,7 @@ export const GameContextProvider = ({ children }) => {
       addCube([x, y, z], "dirtTexture");
     }
   }, []);
+  console.log("â");
   const contextValue = useMemo(() => {
     return {
       cubes,
