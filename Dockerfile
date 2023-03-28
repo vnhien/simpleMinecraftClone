@@ -1,7 +1,5 @@
 FROM node:alpine
 
-RUN npm install -g serve
-
 WORKDIR /app
 
 COPY . .
@@ -10,7 +8,9 @@ RUN npm install
 
 RUN npm run build
 
-FROM nginx:1.19.8-alpine
+RUN sudo apt update
+
+RUN sudo apt install nginx 
 
 COPY --from=build /app/build /usr/share/nginx/html
 
